@@ -1,12 +1,12 @@
 
-export interface Point {
-  x: number;
-  y: number;
+export enum Sender {
+  User = 'user',
+  Model = 'model',
 }
 
-export enum Direction {
-  UP,
-  DOWN,
-  LEFT,
-  RIGHT,
+export interface Message {
+  id: string;
+  sender: Sender;
+  text: string;
+  feedback?: 'liked';
 }
